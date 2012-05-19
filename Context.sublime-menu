@@ -1,0 +1,18 @@
+[
+    {
+        "id": "atoumsmenu",
+        "caption": "Atoum",
+        "children": [
+            {
+                "id": "atoumfilemenu",
+                "caption": "Test this file",
+                "command": "atoum_test_file"
+            },
+            {
+                "id": "atoumdirectorymenu",
+                "caption": "Test files in this directory",
+                "command": "atoum_test_directory"
+            }
+        ] 
+    }
+]

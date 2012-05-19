@@ -1,0 +1,10 @@
+[
+    {
+        "caption": "Atoum: Test this file",
+        "command": "atoum_test_file"
+    },
+    {
+        "caption": "Atoum: Test files in this directory",
+        "command": "atoum_test_directory"
+    }
+]

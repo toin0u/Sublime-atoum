@@ -1,0 +1,26 @@
+[
+    {
+        "caption": "Tools",
+        "mnemonic": "a",
+        "id": "tools",
+        "children":
+        [
+            {
+                "caption": "Atoum",
+                "mnemonic": "a",
+                "id": "atoum",
+                "children":
+                [
+                    {
+                        "command": "atoum_test_file",
+                        "caption": "Test this file"
+                    },
+                    {
+                        "command": "atoum_test_directory",
+                        "caption": "Test files in this directory"
+                    }
+                ]
+            }
+        ]
+    }
+]
