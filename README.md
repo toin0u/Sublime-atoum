@@ -12,6 +12,10 @@ The preferred method is to use the [Sublime Package Manager](http://wbond.net/su
 
 Alternatively, the files can be obtained on github at `https://github.com/toin0u/Sublime-atoum`.
 
+## Screenshot
+
+!['A simple Sublime Text 2 plugin for atoum, unit testing framework for php'](http://i.imgur.com/0dUgW.png)
+
 ## Config
 
 Change `atoum.sublime-settings` with your parameters.
@@ -22,6 +26,10 @@ Change `atoum.sublime-settings` with your parameters.
     "atoum_phar_file": "/usr/local/bin/mageekguy.atoum.phar"
 }
 ```
+
+## Diverse
+
+Tested only on Mac OS X for the moment. [Read more on my blog](http://sbin.dk/2012/05/19/atoum-sublime-text-2-plugin/).
 
 ## License
 

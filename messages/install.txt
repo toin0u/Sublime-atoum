@@ -1,9 +1,9 @@
-Test php files with atoum in sublime by Antoine Corcy (contact@sbin.dk / sbin.dk)
+Test PHP files with atoum in Sublime Text 2
 
 Please direct any feedback to:
-- my email address
-- through github at https://github.com/toin0u/Sublime-atoum
-- my blog
+- email:  contact@sbin.dk
+- github: https://github.com/toin0u/Sublime-atoum
+- blog:   http://sbin.dk/2012/05/19/atoum-sublime-text-2-plugin/
 
 Thank you for your support.
-Antoine
+Antoine Corcy
