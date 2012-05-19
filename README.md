@@ -8,9 +8,13 @@ First of all, you need [atoum](https://github.com/mageekguy/atoum).
 
 Intall the [PHAR file](http://downloads.atoum.org/nightly/mageekguy.atoum.phar) in for instance `/usr/local/bin`.
 
-The preferred method is to use the [Sublime Package Manager](http://wbond.net/sublime_packages/package_control). Alternatively, the files can be obtained on github at `https://github.com/toin0u/Sublime-atoum`.
+The preferred method is to use the [Sublime Package Manager](http://wbond.net/sublime_packages/package_control).
+
+Alternatively, the files can be obtained on github at `https://github.com/toin0u/Sublime-atoum`.
 
 ## Config
+
+Change `atoum.sublime-settings` with your parameters.
 
 ```
 {
@@ -19,7 +23,7 @@ The preferred method is to use the [Sublime Package Manager](http://wbond.net/su
 }
 ```
 
-# License
+## License
 
 All of Sublime Text 2 Atoum Plugin is licensed under the MIT license.
 
