@@ -37,12 +37,25 @@ use_light_report = s.get("use_light_report")
 command = php_command + " " + atoum_phar_file
 
 
+def test();
+    return True;
+
+
 class AtoumCommand(object):
     def get_file(self):
-        return os.path.basename(self.view.file_name())
+        fileName, fileExtension = os.path.splitext(self.view.file_name())
+        if(fileExtension == ".php"):
+            return os.path.basename(self.view.file_name())
+        else:
+            return False
 
     def get_directory(self):
-        return os.path.dirname(self.view.file_name())
+        phpFolder = os.path.dirname(self.view.file_name())
+        for files in os.listdir(phpFolder):
+            if files.endswith(".php"):
+                return phpFolder
+            else:
+                return False
 
     def output_window(self, edit, result):
         scratch_file = sublime.active_window().new_file()
@@ -75,13 +88,19 @@ class AtoumCommand(object):
 
 class AtoumTestFileCommand(AtoumCommand, sublime_plugin.TextCommand):
     def run(self, edit):
-        sublime.status_message("Testing: %s" % self.get_file())
-        cmd = command + " -f " + self.get_directory() + "/" + self.get_file()
-        self.execute(edit, cmd)
+        if(self.get_file()):
+            sublime.status_message("Testing: %s" % self.get_file())
+            cmd = command + " -f " + self.get_directory() + "/" + self.get_file()
+            self.execute(edit, cmd)
+        else:
+            sublime.error_message("This is not a php file...\n\nAtoum is a unit test framework for php!\nVisit: http://atoum.org")
 
 
 class AtoumTestDirectoryCommand(AtoumCommand, sublime_plugin.TextCommand):
     def run(self, edit):
-        sublime.status_message("Testing: %s" % self.get_directory())
-        cmd = command + " -d " + self.get_directory()
-        self.execute(edit, cmd)
+        if(self.get_directory()):
+            sublime.status_message("Testing: %s" % self.get_directory())
+            cmd = command + " -d " + self.get_directory()
+            self.execute(edit, cmd)
+        else:
+            sublime.error_message("Can't find any php file in this directory...\n\nAtoum is a unit test framework for php!\nVisit: http://atoum.org")
