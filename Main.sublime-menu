@@ -18,6 +18,10 @@
                     {
                         "command": "atoum_test_directory",
                         "caption": "Test files in this directory"
+                    },
+                    {
+                        "command": "atoum_help",
+                        "caption": "Help..."
                     }
                 ]
             }

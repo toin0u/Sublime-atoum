@@ -6,5 +6,9 @@
     {
         "caption": "Atoum: Test files in this directory",
         "command": "atoum_test_directory"
+    },
+    {
+        "caption": "Atoum: Help...",
+        "command": "atoum_help"
     }
 ]
