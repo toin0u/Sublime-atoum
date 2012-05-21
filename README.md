@@ -24,7 +24,7 @@ Result in a panel
 
 ## Config
 
-Change `atoum.sublime-settings` with your parameters which is accessible via the command panel, menu or the context menu.
+Change `atoum.sublime-settings` with your parameters which is accessible via the command panel, menu or the context menu. Changes are taken immediately.
 
 You can activate the **light report** which will be shown in a **panel** not a tab.
 
