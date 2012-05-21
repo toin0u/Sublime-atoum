@@ -20,10 +20,13 @@ Alternatively, the files can be obtained on github at `https://github.com/toin0u
 
 Change `atoum.sublime-settings` with your parameters.
 
+You can activate the **light report** which will be shown in a **panel** not a tab.
+
 ```
 {
     "php_command": "/opt/local/bin/php",
-    "atoum_phar_file": "/usr/local/bin/mageekguy.atoum.phar"
+    "atoum_phar_file": "/usr/local/bin/mageekguy.atoum.phar",
+    "use_light_report": true
 }
 ```
 

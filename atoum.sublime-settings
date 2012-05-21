@@ -1,4 +1,5 @@
 {
     "php_command": "/opt/local/bin/php",
-    "atoum_phar_file": "/usr/local/bin/mageekguy.atoum.phar"
+    "atoum_phar_file": "/usr/local/bin/mageekguy.atoum.phar",
+    "use_light_report": false
 }
