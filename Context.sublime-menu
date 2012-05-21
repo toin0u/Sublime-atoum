@@ -12,11 +12,6 @@
                 "id": "atoumdirectorymenu",
                 "caption": "Test files in this directory",
                 "command": "atoum_test_directory"
-            },
-            {
-                "id": "atoumhelpmenu",
-                "caption": "Help...",
-                "command": "atoum_help"
             }
         ] 
     }

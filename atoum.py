@@ -85,10 +85,3 @@ class AtoumTestDirectoryCommand(AtoumCommand, sublime_plugin.TextCommand):
         sublime.status_message("Testing: %s" % self.get_directory())
         cmd = command + " -d " + self.get_directory()
         self.execute(edit, cmd)
-
-
-class AtoumHelpCommand(AtoumCommand, sublime_plugin.TextCommand):
-    def run(self, edit):
-        sublime.status_message("Opening help page")
-        cmd = command + " --help"
-        self.execute(edit, cmd)
