@@ -12,6 +12,20 @@
                 "id": "atoumdirectorymenu",
                 "caption": "Test files in this directory",
                 "command": "atoum_test_directory"
+            },
+            {
+                "caption": "Atoum: Default File Settings",
+                "command": "open_file",
+                "args": {
+                    "file": "${packages}/atoum/atoum.sublime-settings"
+                }
+            },
+            {
+                "caption": "Atoum: User File Settings",
+                "command": "open_file",
+                "args": {
+                    "file": "${packages}/User/atoum.sublime-settings"
+                }
             }
         ] 
     }

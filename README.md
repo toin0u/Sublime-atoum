@@ -18,7 +18,7 @@ Alternatively, the files can be obtained on github at `https://github.com/toin0u
 
 ## Config
 
-Change `atoum.sublime-settings` with your parameters.
+Change `atoum.sublime-settings` with your parameters which is accessible via the command panel, menu or the context menu.
 
 You can activate the **light report** which will be shown in a **panel** not a tab.
 
@@ -29,6 +29,13 @@ You can activate the **light report** which will be shown in a **panel** not a t
     "use_light_report": true
 }
 ```
+
+## Usage
+
+Default shorcuts are:
+
+* `cmd+alt+s` on OSX or `ctrl+alt+a` on Linux and Windows: Test the current file
+* `cmd+alt+d` on OSX or `ctrl+alt+d` on Linux and Windows: Test files in the current directory
 
 ## Diverse
 
