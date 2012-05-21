@@ -27,18 +27,11 @@ import subprocess
 
 ''' global vars '''
 atoum = "atoum"
-syntax_file = "Packages/atoum/atoum.tmLanguage"
-
-''' get configuration vars '''
-s = sublime.load_settings("atoum.sublime-settings")
-php_command = s.get("php_command")
-atoum_phar_file = s.get("atoum_phar_file")
-use_light_report = s.get("use_light_report")
-command = php_command + " " + atoum_phar_file
-
-
-def test();
-    return True;
+syntaxFile = "Packages/atoum/atoum.tmLanguage"
+statusMessageFileTest = "Unit testing file [ %s ] with atoum..."
+dialogMessageFileTest = "This is not a php file...\n\nAtoum is a unit test framework for php!\nVisit: http://atoum.org"
+statusMessageDirectoryTest = "Unit testing directory [ %s ] with atoum..."
+dialogMessageDirectoryTest = "Can't find any php file in this directory...\n\nAtoum is a unit test framework for php!\nVisit: http://atoum.org"
 
 
 class AtoumCommand(object):
@@ -64,7 +57,7 @@ class AtoumCommand(object):
         scratch_file.insert(edit, 0, result)
         scratch_file.end_edit(edit)
         scratch_file.set_read_only(True)
-        scratch_file.set_syntax_file(syntax_file)
+        scratch_file.set_syntax_file(syntaxFile)
 
     def output_panel(self, edit, result):
         panel = self.view.window().get_output_panel(atoum)
@@ -73,14 +66,14 @@ class AtoumCommand(object):
         panel.insert(edit, panel.size(), result)
         panel.end_edit(edit)
         panel.set_read_only(True)
-        panel.set_syntax_file(syntax_file)
+        panel.set_syntax_file(syntaxFile)
         self.view.window().run_command("show_panel", {"panel": "output." + atoum})
 
-    def execute(self, edit, command):
-        if use_light_report:
+    def execute(self, edit, command, useLightReport):
+        if useLightReport:
             command = command + " -ulr"
         result, e = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True, cwd=self.get_directory()).communicate()
-        if use_light_report:
+        if useLightReport:
             self.output_panel(edit, result)
         else:
             self.output_window(edit, result)
@@ -89,18 +82,20 @@ class AtoumCommand(object):
 class AtoumTestFileCommand(AtoumCommand, sublime_plugin.TextCommand):
     def run(self, edit):
         if(self.get_file()):
-            sublime.status_message("Testing: %s" % self.get_file())
-            cmd = command + " -f " + self.get_directory() + "/" + self.get_file()
-            self.execute(edit, cmd)
+            sublime.status_message(statusMessageFileTest % self.get_file())
+            s = sublime.load_settings("atoum.sublime-settings")
+            cmd = s.get("php_command") + " " + s.get("atoum_phar_file") + " -f " + self.get_directory() + "/" + self.get_file()
+            self.execute(edit, cmd, s.get("use_light_report"))
         else:
-            sublime.error_message("This is not a php file...\n\nAtoum is a unit test framework for php!\nVisit: http://atoum.org")
+            sublime.error_message(dialogMessageFileTest)
 
 
 class AtoumTestDirectoryCommand(AtoumCommand, sublime_plugin.TextCommand):
     def run(self, edit):
         if(self.get_directory()):
-            sublime.status_message("Testing: %s" % self.get_directory())
-            cmd = command + " -d " + self.get_directory()
-            self.execute(edit, cmd)
+            sublime.status_message(statusMessageDirectoryTest % self.get_directory())
+            s = sublime.load_settings("atoum.sublime-settings")
+            cmd = s.get("php_command") + " " + s.get("atoum_phar_file") + " -d " + self.get_directory()
+            self.execute(edit, cmd, s.get("use_light_report"))
         else:
-            sublime.error_message("Can't find any php file in this directory...\n\nAtoum is a unit test framework for php!\nVisit: http://atoum.org")
+            sublime.error_message(dialogMessageDirectoryTest)
