@@ -8,13 +8,19 @@ First of all, you need [atoum](https://github.com/mageekguy/atoum).
 
 Intall the [PHAR file](http://downloads.atoum.org/nightly/mageekguy.atoum.phar) in for instance `/usr/local/bin`.
 
-The preferred method is to use the [Sublime Package Manager](http://wbond.net/sublime_packages/package_control).
+The preferred method is to use the [Sublime Package Manager](http://wbond.net/sublime_packages/package_control) (available soon pull request pending).
 
-Alternatively, the files can be obtained on github at `https://github.com/toin0u/Sublime-atoum`.
+Alternatively, the plugin can be obtained on github at `https://github.com/toin0u/Sublime-atoum`. Just clone it into your packages, use the command panel and `Preferences: Browse Packages`.
 
 ## Screenshot
 
+Result in a tab:
+
 !['A simple Sublime Text 2 plugin for atoum, unit testing framework for php'](http://i.imgur.com/0dUgW.png)
+
+Result in a panel
+
+!['A simple Sublime Text 2 plugin for atoum, unit testing framework for php'](http://i.imgur.com/0R2QD.png)
 
 ## Config
 
