@@ -1,0 +1,6 @@
+[
+    {
+        "keys": ["super+alt+a"], "command": "atoum_test_file",
+        "keys": ["super+alt+d"], "command": "atoum_test_directory"
+    }
+]
