@@ -81,21 +81,23 @@ class AtoumCommand(object):
 
 class AtoumTestFileCommand(AtoumCommand, sublime_plugin.TextCommand):
     def run(self, edit):
-        if(self.get_file()):
+        if self.get_file():
             sublime.status_message(statusMessageFileTest % self.get_file())
             s = sublime.load_settings("atoum.sublime-settings")
             cmd = s.get("php_command") + " " + s.get("atoum_phar_file") + " -f " + self.get_directory() + "/" + self.get_file()
             self.execute(edit, cmd, s.get("use_light_report"))
         else:
             sublime.error_message(dialogMessageFileTest)
+            return False
 
 
 class AtoumTestDirectoryCommand(AtoumCommand, sublime_plugin.TextCommand):
     def run(self, edit):
-        if(self.get_directory()):
+        if self.get_directory():
             sublime.status_message(statusMessageDirectoryTest % self.get_directory())
             s = sublime.load_settings("atoum.sublime-settings")
             cmd = s.get("php_command") + " " + s.get("atoum_phar_file") + " -d " + self.get_directory()
             self.execute(edit, cmd, s.get("use_light_report"))
         else:
             sublime.error_message(dialogMessageDirectoryTest)
+            return False
