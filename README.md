@@ -8,9 +8,7 @@ First of all, you need [atoum](https://github.com/mageekguy/atoum).
 
 Intall the [PHAR file](http://downloads.atoum.org/nightly/mageekguy.atoum.phar) in for instance `/usr/local/bin`.
 
-The preferred method is to use the [Sublime Package Manager](http://wbond.net/sublime_packages/package_control) (available soon [pull request](https://github.com/wbond/package_control_channel/pull/321) pending).
-
-Alternatively, the plugin can be obtained on github at `https://github.com/toin0u/Sublime-atoum`. Just clone it into your packages, use the command panel and `Preferences: Browse Packages`.
+Finally, install the plugin with the [Sublime Package Control](http://wbond.net/sublime_packages/package_control)
 
 ## Screenshot
 
