@@ -1,5 +1,7 @@
 # Sublime Text 2 atoum Plugin
 
+![stillmaintained.com](http://stillmaintained.com/toin0u/Sublime-atoum.png)
+
 A simple plugin to test php files with atoum like the [vim-plugin](https://github.com/mageekguy/atoum/wiki/atoum-et-VIM).
 
 ## Install
